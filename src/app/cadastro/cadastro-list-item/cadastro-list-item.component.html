@@ -1,0 +1,9 @@
+<div [innerHTML]="itens.nome" ></div>
+<div [innerHTML]="itens.tipo" ></div>
+  <div [innerHTML]="itens.valor" ></div>
+  <div>
+    <button type="button" [routerLink]="['/edit', itens.id]" > Alterar</button>
+  </div>
+  <div>
+    <button type="button"  (click)="remover(itens)"> Excluir</button>
+  </div>

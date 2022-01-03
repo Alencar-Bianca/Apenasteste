@@ -1,0 +1,14 @@
+<p>Tarefas</p>
+
+<div  *ngIf="item.length == 0">
+  <p>Sem nenhuma tarefa</p>
+</div>
+<div>
+
+  <ul  *ngIf="item.length > 0">
+    <li *ngFor="let it of item">
+      <app-cadastro-list-item [itens]="it"></app-cadastro-list-item>
+    </li>
+  </ul>
+</div>
+<button type="button" [routerLink]="['/new']" >Nova Tarefa</button>

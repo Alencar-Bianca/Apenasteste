@@ -1,0 +1,15 @@
+<p>{{title}}</p>
+
+<section>
+  <form (ngSubmit)="onSubmit()" >
+    <div>
+      <label >Nome</label>
+      <input [(ngModel)]="item.nome" name="nome" rows="5" ngForm #myForm="ngForm">
+      <label >Preco</label>
+      <input [(ngModel)]="item.valor" name="preco" rows="5" ngForm #myForm="ngForm">
+    </div>
+
+    <button type="submit">Salvar</button>
+    <button type="button" [routerLink]="['']" >Cancelar</button>
+  </form>
+</section>
